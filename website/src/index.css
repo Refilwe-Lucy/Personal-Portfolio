@@ -1,0 +1,707 @@
+* {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  outline: none;
+
+}
+
+body {
+  background: rgb(30, 30, 30);
+  overflow: hidden;
+  overflow-y: scroll;
+  color: #fff;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.header .logo a {
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.logo {
+  position: relative;
+  font-size: 25px;
+  color: burlywood;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.logo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  animation: showRight 1s ease forwards;
+  animation-delay: .2s;
+}
+
+.header .logo a span {
+  color: burlywood;
+  font-size: 50px;
+
+}
+
+.NavBar {
+  margin: 0 20px;
+}
+
+.NavBar a {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 50px;
+  transition: all 0.5s;
+
+}
+
+.NavBar a:hover {
+  color: burlywood;
+}
+
+.HireMebtn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 45px;
+  background: burlywood;
+  border-radius: 40px;
+  z-index: 1;
+  margin-left: -400px;
+  border: none;
+
+}
+
+.HireMebtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  inset: 0;
+  z-index: -1;
+  border-radius: 40px;
+  background-size: 200%;
+}
+
+.me {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1px;
+
+}
+
+.home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+
+}
+
+.home-content {
+  max-width: 500px;
+}
+
+.home-content h1 {
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 1.2;
+
+
+}
+
+.content-content h3 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.home p {
+  font-size: 16px;
+  margin: 20px 0 40px;
+}
+
+.cv-btn {
+  margin-top: 40px;
+}
+
+.cv-btn a {
+  background: burlywood;
+  font-size: 19px;
+  letter-spacing: 1px;
+  border: 2px solid burlywood;
+  padding: 13px 25px;
+  border-radius: 50px;
+  transition: all 0.5s;
+  color: #fff;
+
+}
+
+.cv-btn a:hover {
+  background-color: transparent;
+  border: 1px solid #fff;
+
+}
+
+.home-sci {
+  position: absolute;
+  bottom: 100px;
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.home-sci a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid burlywood;
+  border-radius: 50%;
+  font-size: 20px;
+  color: burlywood;
+  text-decoration: none;
+  z-index: 1;
+  overflow: hidden;
+  transition: .5s;
+
+}
+
+.home-sci a:hover {
+  color: black;
+}
+
+.home-sci a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: burlywood;
+  z-index: -1;
+  transition: .5s;
+
+}
+
+.home-sci a:hover::before {
+  width: 100%;
+}
+
+@keyframes showRight {
+  100% {
+    width: 0;
+  }
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  background: var(--second-bg-color);
+  padding-bottom: 6rem;
+  font-size: 45;
+}
+
+.heading {
+  font-size: 35px;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.about-content {
+  font-size: 2.6rem;
+  max-width: 500px;
+  text-align: center;
+
+
+
+}
+
+.about-content p {
+  font-size: 16px;
+  margin: 20px 0 40px;
+}
+
+.HireMebtn.btns {
+  justify-content: center;
+  align-items: center;
+  display: inline-block;
+  width: 15rem;
+  width: 15rem;
+  margin-left: 10px;
+}
+
+.btn-HireMebtn a::before {
+  background-color: burlywood;
+
+}
+
+.btn {
+  justify-content: center;
+  align-items: center;
+  font-size: 19px;
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+
+
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-gap: 1rem;
+  padding: 1rem 80px;
+  font-size: 1.2rem
+}
+
+.service-box {
+  padding: 1rem;
+  color: #ddd;
+  cursor: pointer;
+}
+
+.service-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+
+
+}
+
+.img {
+  width: 90px;
+  height: 90px;
+  position: relative;
+  border-radius: 45px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 90px;
+}
+
+.Services_section {
+  background: transparent;
+  width: 100%;
+  padding: 100px 0px;
+}
+
+.title {
+  color: white;
+  font-size: 20px;
+  width: 1130px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.card {
+  height: 365px;
+  width: 335px;
+  padding: 20px 35px;
+  background: #191919;
+  border-radius: 20px;
+  margin: 15px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card i {
+  font-size: 50px;
+  display: block;
+  text-align: center;
+  margin: 25px 0px;
+  color: burlywood;
+}
+
+.text {
+  color: white;
+  font-size: 23px;
+  margin-bottom: 15px;
+}
+
+.pra p {
+  color: burlywood;
+  font-size: 16px;
+  line-height: 27px;
+  margin-bottom: 25px;
+}
+
+.card .button {
+  background-color: burlywood;
+  color: white;
+  text-decoration: none;
+  border: 2px solid transparent;
+  padding: 9px 22px;
+  border-radius: 30px;
+  transition: .4s;
+}
+
+.card .button:hover {
+  background-color: transparent;
+  border: 2px solid burlywood;
+  cursor: pointer;
+
+}
+
+.picture {
+  height: 10rem;
+}
+
+.services section {
+  background: burlywood;
+}
+
+.main-text {
+  text-align: center;
+
+}
+
+.wrapper {
+  padding: 10px 10%;
+  text-align: center;
+
+}
+
+#card-area {
+  padding: 50px 0;
+}
+
+.box-area {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.box {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.box img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.over {
+  height: 0;
+  width: 100%;
+  background: linear-gradient(transparent, #1c1c1c 58%);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+
+
+
+}
+
+.over h3 {
+  font-weight: 500;
+  margin-bottom: 5px;
+  margin-top: 80%;
+  font-family: bebas neue;
+  letter-spacing: 2px;
+}
+
+.over a {
+  margin-top: 15px;
+  color: #ddd;
+  text-decoration: none;
+  font-size: 18px;
+  background: burlywood;
+  border-radius: 60px;
+  text-align: center;
+  padding: 8px 15px;
+}
+
+.boxLhover img {
+  transform: scale(1.2);
+}
+
+.box:hover .over {
+  height: 100%;
+}
+
+.cont {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 8%;
+
+}
+
+.cont .row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.row section.col {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.row section.left {
+  flex-basis: 35%;
+  min-width: 320px;
+  margin-right: 60px;
+
+}
+
+.row section.right {
+  flex-basis: 60%;
+
+
+}
+
+section.left .contactTitle h2 {
+  position: relative;
+  font-size: 28px;
+  color: #ddd;
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
+section.left .contactTitle h2::before {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 1px;
+  background-color: #888;
+  top: 120%;
+  left: 0;
+}
+
+section.left .contactTitle h2::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: burlywood;
+  top: calc(120% -1px);
+}
+
+section.left .contactTitle p {
+  font-size: 17px;
+  color: ccc;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  padding-bottom: 22px;
+}
+
+section.left .contactInfo {
+  margin-bottom: 16px;
+
+}
+
+.contactInfo .iconGroup {
+  display: flex;
+  align-items: center;
+  margin: 25px 0px;
+
+}
+
+.iconGroup .icon {
+  width: 45px;
+  height: 45px;
+  border: 2px solid burlywood;
+  border-radius: 50%;
+  margin-right: 20px;
+  position: relative;
+}
+
+.iconGroup .icon i {
+  font-size: 20px;
+  color: #ddd;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.iconGroup .details span {
+  display: block;
+  color: #888;
+  font-size: 18px;
+}
+
+.iconGroup .details span:nth-child(1) {
+  text-transform: uppercase;
+  color: #ccc;
+
+}
+
+.row section.right .messageForm {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+
+.row section.right .inputGroup {
+  margin: 18px 0px;
+  position: relative;
+}
+
+.messageForm .x {
+  flex-basis: 48%
+}
+
+.messageForm .halfWidth {
+  flex-basis: 50%;
+}
+
+.messageForm .fullWidth {
+  flex-basis: 100%;
+}
+
+.messageForm input,
+.messageForm textarea {
+  width: 100%;
+  font-size: 18px;
+  padding: 2px 0px;
+  background-color: 2e2e2e;
+  color: #ddd;
+  border: none;
+  border-bottom: 2px solid #666;
+  outline: none;
+}
+
+.messageForm textarea {
+  resize: none;
+  height: 220px;
+  display: block;
+}
+
+textarea::-webkit-scrollbar {
+  width: 5px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background-color: 1e1e1e;
+  border-radius: 15px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: burlywood;
+  border-radius: 15px;
+}
+
+.inputGroup label {
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  color: #888;
+  font-size: 18px;
+  transition: 0.4s;
+  pointer-events: none;
+}
+
+.inputGroup:nth-child(4) label {
+  top: 2px;
+}
+
+.inputGroup input:focus~label,
+.inputGroup textarea:focus~label,
+.inputGroup input:valid~label,
+.inputGroup textarea:valid~label {
+  transform: translateY(-30px);
+  font-size: 16px;
+}
+
+.inputGroup button {
+  padding: 8px 16px;
+  font-size: 18px;
+  background-color: burlywood;
+  color: #ddd;
+  border: 1px solid transparent;
+  border-radius: 25px;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+  transition: 0.4s;
+
+
+}
+.inputGroup button:hover{
+  background-color: #2e2e2e;
+  color: burlywood;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid burlywood;
+}
+
+
